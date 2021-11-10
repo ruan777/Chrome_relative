@@ -373,7 +373,7 @@ static Handle<FixedArrayBase> ConvertElementsWithCapacity(
 
 在（11）处调用漏洞函数，且参数capacity就是我们传入的0x80000000，这里给出栈回溯：
 
-![](/img/issue1793-stacktrace.png)
+![](./img/stacktrace.png)
 
 后续在`void BasicGrowCapacityAndConvertImpl(Handle<JSObject> object, Handle<FixedArrayBase> old_elements,ElementsKind from_kind, ElementsKind to_kind, uint32_t capacity)`函数中的：
 
