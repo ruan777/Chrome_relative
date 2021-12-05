@@ -279,7 +279,7 @@ SomeType* SomeClass::SomeMethod() {
 .text:0000000180002184
 ```
 
-这个函数会把this+8的地址返回回来，我们只要调用这个函数两次，对应`render_frame_host_->GetProcess()->GetBrowserContext()`，注意的是找到的函数要是再虚表中的函数，也就是ida中的.rdata段会有指针指向该函数；为了泄露对地址，我们需要找到一个这样的虚函数：
+这个函数会把this+8的地址返回回来，我们只要调用这个函数两次，对应`render_frame_host_->GetProcess()->GetBrowserContext()`，注意的是找到的函数要是再虚表中的函数，也就是ida中的.rdata段会有指针指向该函数；为了泄露堆地址，我们需要找到一个这样的虚函数：
 
 ```cpp
 void VirtualFunction() override() {
