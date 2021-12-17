@@ -247,7 +247,7 @@ void InstalledAppProviderImpl::FilterInstalledApps(
 .text:0000000180D32BB4                 xor     rax, rsp
 .text:0000000180D32BB7                 mov     [rsp+0A8h+var_28], rax
 .text:0000000180D32BBF                 mov     rcx, [rcx+8]
-.text:0000000180D32BC3                 mov     rax, [rcx]				// 这里的rax指向的就是我们可控的地方
+.text:0000000180D32BC3                 mov     rax, [rcx]				// 这里的rcx指向的就是我们可控的地方
 .text:0000000180D32BC6                 call    qword ptr [rax+48h]
 .text:0000000180D32BC9                 mov     rdx, [rax]
 .text:0000000180D32BCC                 mov     rcx, rax
