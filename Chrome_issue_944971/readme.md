@@ -680,9 +680,9 @@ Handle<FixedArray> OrderedHashSet::ConvertToKeysArray(
 
 可以看到紧邻着RegExp对象的是它自己的data数组，之后才是keys_，而我们覆盖的是data数组的Map，故一直没有利用成功；
 
-但是，在chrome中测试就可以了，:P
+但是，在chrome中测试就~~可以~~了，一开始可以，后面都不行了。。。。。。。。。。。。。。。。
 
-有点神奇
+有点~~神奇~~蛋疼
 
 ## 参考链接
 
